@@ -1,1 +1,86 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  background: black;
+  font-family: monospace;
+  color: white;
+}
+
+canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 100vw;
+  height: 100vh;
+  background: black;
+}
+
+#fade-overlay {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  background: black;
+  opacity: 1;
+  pointer-events: none;
+  transition: opacity 1.5s ease-in-out;
+  z-index: 10;
+}
+
+.fade-out {
+  opacity: 0 !important;
+}
+
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  z-index: 20;
+}
+
+button, input[type="range"], label {
+  display: block;
+  margin: 10px auto;
+  background: none;
+  border: 1px solid white;
+  color: white;
+  padding: 10px;
+  cursor: pointer;
+}
+
+input[type="range"] {
+  width: 200px;
+}
+
+.hidden {
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+  position: absolute;
+}
+
+#settings-panel {
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(20, 20, 20, 0.95);
+  padding: 20px;
+  border: 1px solid white;
+  z-index: 20;
+}
+
+.rebind-row {
+  margin: 10px;
+  display: flex;
+  justify-content: space-between;
+  width: 220px;
+  margin-left: auto;
+  margin-right: auto;
+}
 
