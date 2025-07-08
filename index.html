@@ -1,1 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>A Dark Room</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <canvas id="game-canvas"></canvas>
+  <div id="fade-overlay"></div>
 
+  <div id="start-screen" class="centered">
+    <h1>A Dark Room</h1>
+    <button id="start-game-btn">Start Game</button>
+    <button id="settings-btn">Settings</button>
+  </div>
+
+  <div id="settings-panel" class="hidden">
+    <h2>Settings</h2>
+
+    <label>Master Volume <input type="range" min="0" max="100" id="volume-master" /></label>
+    <label>Music Volume <input type="range" min="0" max="100" id="volume-music" /></label>
+    <label>SFX Volume <input type="range" min="0" max="100" id="volume-sfx" /></label>
+
+    <button id="fullscreen-toggle">Toggle Fullscreen</button>
+    <button id="resolution-toggle">Change Resolution</button>
+
+    <label><input type="checkbox" id="subtitles-toggle" /> Subtitles</label>
+    <label><input type="checkbox" id="contrast-toggle" /> High Contrast Outlines</label>
+
+    <button id="rebind-controls">Rebind Controls</button>
+    <button id="close-settings">Close</button>
+
+    <div id="key-rebind-ui" class="hidden">
+      <h3>Rebind Keys</h3>
+      <div class="rebind-row">Jump: <button data-action="jump">W</button></div>
+      <div class="rebind-row">Left: <button data-action="left">A</button></div>
+      <div class="rebind-row">Right: <button data-action="right">D</button></div>
+      <div class="rebind-row">Crouch: <button data-action="crouch">S</button></div>
+      <button id="close-rebind-ui">Done</button>
+    </div>
+  </div>
+
+  <script src="player.js"></script>
+  <script src="game.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>
